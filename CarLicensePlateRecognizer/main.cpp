@@ -5,7 +5,7 @@
 #include <iostream>
 
 #define WIN_NAME "자동차 번호판 인식"
-#define IMAGE_PATH "..\\car_license_plate_images\\2.jpg"
+#define IMAGE_PATH "..\\car_license_plate_images\\1.jpg"
 #define CANNY_THRESHOLD_1 100
 #define CANNY_THRESHOLD_2 400
 #define MAX_WIDTH_HEIGHT_RATIO 3.5
@@ -16,19 +16,6 @@
 
 using namespace std;
 using namespace cv;
-
-/**
-*	현재 시간정보를 문자열로 가져오는 메소드
-*/
-const std::string getCurrentTS2Str() {
-	time_t now = time(0);
-	struct tm tstruct;
-	char buf[80];
-	tstruct = *localtime(&now);
-	strftime(buf, sizeof(buf), "%Y%m%d%H%M%S", &tstruct);
-
-	return buf;
-}
 
 /**
 *	메인 메소드
